@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Specification-Title: hdo
+Specification-Vendor: thisgoi (Hivens)
+Specification-Version: 1
+Implementation-Title: hdo
+Implementation-Version: 0.0.0-Alpha
+Implementation-Vendor: thisgoi (Hivens)
+Implementation-Timestamp: 2024-11-26T00:21:01+0200
+
