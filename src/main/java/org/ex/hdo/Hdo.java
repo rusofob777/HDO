@@ -40,9 +40,8 @@ public class Hdo {
     public Hdo() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register the commonSetup method for modloading
+        CreativeModTabs.register(modEventBus);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
 
     }
 
