@@ -3,7 +3,10 @@ package Hivens.hdo;
 import Hivens.hdo.Registry.BlockRegistry;
 import Hivens.hdo.Registry.ItemRegistry;
 import com.mojang.logging.LogUtils;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -29,6 +32,7 @@ public class HDO {
         MinecraftForge.EVENT_BUS.register(this);
 
 
+
         LOGGER.info("HDO Mod Initialization Started");
 
     }
@@ -38,4 +42,10 @@ public class HDO {
     }
 
 
+    private void addCreative(BuildCreativeModeTabContentsEvent event){
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ItemRegistry.ATLANTUM);
+        }
+
+    }
 }

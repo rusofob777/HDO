@@ -19,7 +19,6 @@ public class CreativeTabRegistry {
 
                   pOutput.accept(ItemRegistry.ATLANTUM.get());
 
-                  pOutput.accept(BlockRegistry.ATLANTUM_ORE.get());
 
 
 
