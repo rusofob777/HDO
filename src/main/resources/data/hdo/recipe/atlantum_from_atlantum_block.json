@@ -2,12 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": {
-    "item": "hdo:atlantum_bleck"
+    "item": "hdo:atlantum_block"
   },
 
-
-"result":{
-"item":"hdo:atlantum",
-"count":9
+  "result": {
+  "item": "hdo:atlantum",
+  "count": 9
     }
 }
