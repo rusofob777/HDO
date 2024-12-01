@@ -25,7 +25,6 @@ public class HDO {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         CreativeTabRegistry.register(modEventBus);
-
         ItemRegistry.register(modEventBus);
         BlockRegistry.register(modEventBus);
 
@@ -38,7 +37,6 @@ public class HDO {
 
 
         LOGGER.info("HDO Mod Initialization Started");
-
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

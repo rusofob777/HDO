@@ -18,11 +18,23 @@ public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, HDO.MODID);
 
-    public static final RegistryObject<Block> ATLANTUM_ORE = BLOCKS.register("atlantum_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE).sound(SoundType.AMETHYST)) );
+    public static final RegistryObject<Block> ATLANTUM_ORE = registerBlock("atlantum_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE)
+                    .sound(SoundType.AMETHYST))
+    );
 
-    public static final RegistryObject<Block> ATLANTUM_BLOCK = BLOCKS.register("atlantum_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).sound(SoundType.METAL)));
+    public static final RegistryObject<Block> ATLANTUM_BLOCK = registerBlock("atlantum_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)
+                    .sound(SoundType.METAL)));
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,13 +45,11 @@ public class BlockRegistry {
         registerBlockItem(name, toReturn);
         return toReturn;
     }
-
-
     private static <T extends  Block> RegistryObject<BlockItem> registerBlockItem(String name, RegistryObject<T> block){
-return ItemRegistry.Items.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        return ItemRegistry.Items.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus modEventBus) {
-
+            BLOCKS.register(modEventBus);
     }
 }
