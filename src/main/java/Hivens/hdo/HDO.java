@@ -1,6 +1,7 @@
 package Hivens.hdo;
 
 import Hivens.hdo.Registry.BlockRegistry;
+import Hivens.hdo.Registry.CreativeTabRegistry;
 import Hivens.hdo.Registry.ItemRegistry;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTab;
@@ -23,6 +24,7 @@ public class HDO {
     public HDO() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        CreativeTabRegistry.register(modEventBus);
 
         ItemRegistry.register(modEventBus);
         BlockRegistry.register(modEventBus);
@@ -30,6 +32,8 @@ public class HDO {
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
+
+        modEventBus.addListener(this::addCreative);
 
 
 

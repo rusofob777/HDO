@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "hdo:block/atlantum_ore"
-    }
+"variants": {
+  "": {
+    "model":"hdo:block/atlantum_ore"
   }
+}
 }

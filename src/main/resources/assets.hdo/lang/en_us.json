@@ -1,4 +1,9 @@
 {
-"item.hdo.atlantum":"Atlantum",
-  "block.hdo.atlantum_ore": "Atlantum Ore"
+  "block.hdo.atlantum_ore": "Atlantum Ore",
+  "block.hdo.atlantum_block": "Atlantum block",
+
+  "item.hdo.atlantum": "Atlantum",
+
+
+  "creativetab.hdo_tab": "Dendrarion Ocean"
 }

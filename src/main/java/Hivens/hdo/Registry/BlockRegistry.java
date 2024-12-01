@@ -18,6 +18,12 @@ public class BlockRegistry {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, HDO.MODID);
 
+    public static final RegistryObject<Block> ATLANTUM_ORE = BLOCKS.register("atlantum_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_ORE).sound(SoundType.AMETHYST)) );
+
+    public static final RegistryObject<Block> ATLANTUM_BLOCK = BLOCKS.register("atlantum_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).sound(SoundType.METAL)));
+
 
 
 
