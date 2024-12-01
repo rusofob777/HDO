@@ -12,6 +12,8 @@ import net.minecraftforge.registries.RegistryObject;
 public class CreativeTabRegistry {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, HDO.MODID);
+
+
     public static final RegistryObject<CreativeModeTab> HDO_TAB = CREATIVE_MODE_TABS.register("hdo_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ItemRegistry.ATLANTUM.get()))
                     .title(Component.translatable("creativetab.hdo_tab"))
@@ -29,6 +31,9 @@ public class CreativeTabRegistry {
 
 
                     }).build());
+
+
+
     public static void  register (IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }

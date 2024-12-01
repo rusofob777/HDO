@@ -32,8 +32,6 @@ public class HDO {
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
-        modEventBus.addListener(this::addCreative);
-
 
 
         LOGGER.info("HDO Mod Initialization Started");
@@ -44,10 +42,5 @@ public class HDO {
     }
 
 
-    private void addCreative(BuildCreativeModeTabContentsEvent event){
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-            event.accept(ItemRegistry.ATLANTUM);
-        }
 
-    }
 }
